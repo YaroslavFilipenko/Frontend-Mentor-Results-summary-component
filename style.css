@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'normal';
+    src: url('assets/fonts/HankenGrotesk-Medium.woff') format('woff'),
+        url('assets/fonts/HankenGrotesk-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('assets/fonts/HankenGrotesk-Bold.woff') format('woff'),
+        url('assets/fonts/HankenGrotesk-Bold.woff') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'extra';
+    src: url('assets/fonts/HankenGrotesk-ExtraBold.woff') format('woff'),
+        url('assets/fonts/HankenGrotesk-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+}
+
+
+
+body {
+    font-family: normal;
+    background-color: #fff;
+}
+
+main {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-family: bold;
+    font-size: 1.25rem;
+}
+
+.wrapper {
+    display: flex;
+    width: 740px;
+    height: 512px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 40px 30px 100px 5px rgba(214, 214, 214, 1);
+}
+
+.left-block,
+.right-block {
+     width: 290px;
+     padding: 40px;
+}
+
+.left-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(240, 81%, 54%));
+    border-radius: 0 25px 25px 0;
+}
+
+.left-block__title {
+    color: hsl(241, 100%, 89%);
+    text-align: center;
+}
+
+.left-block__counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    margin: 40px 0;
+}
+
+.counter__main {
+    font-family: 'extra';
+    font-size: 4rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.counter__general {
+    font-family: 'bold';
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    color: hsl(241, 100%, 89%);
+}
+
+.left-block__info {
+    text-align: center;
+    width: 245px;
+}
+
+.info__rating {
+    font-family: 'bold';
+    font-size: 1.625rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.info__text {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    color: hsl(241, 100%, 89%);
+    margin-top: 25px;
+}
+
+.right-block__title {
+    color: hsl(224, 30%, 27%);
+}
+
+.right-block__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 270px;
+    margin: 40px 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.item:first-child {
+    background-color: hsl(0, 100%, 97%);
+    color: hsl(0, 100%, 67%);
+}
+
+.item:nth-child(2) {
+    background-color: hsl(39, 100%, 97%);
+    color: hsl(39, 100%, 56%);
+}
+
+.item:nth-child(3) {
+    background-color: hsl(166, 100%, 97%);
+    color: hsl(166, 100%, 37%);
+}
+
+.item:last-child {
+    background-color: hsl(234, 85%, 97%);
+    color: hsl(234, 85%, 45%);
+}
+
+
+.item-name {
+    display: flex;
+    align-items: center; 
+}
+
+svg {
+    margin-right: 10px;
+}
+
+.item-score {
+    color: hsl(224, 30%, 65%);
+}
+
+span {
+    color: hsl(224, 30%, 27%);
+}
+
+.right-block__button {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 25px;
+    color: hsl(0, 0%, 100%);
+}
+
+.right-block__button:hover {
+    background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(240, 81%, 54%));
+    transition: 1s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+    
+    .wrapper {
+        flex-direction: column;
+        height: 810px;
+        width: 375px;
+        border-radius: unset;
+    }
+
+    .left-block,
+    .right-block {
+        width: 375px;
+        border-radius: unset;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .left-block {
+        border-radius: 0 0 25px 25px;
+    }
+
+    .left-block__counter {
+        width: 140px;
+        height: 140px;
+        margin: 25px 0;
+    }
+
+    .counter__main {
+        font-size: 3rem;
+    }
+
+    .counter__general {
+        font-size: 0.75rem;
+    }
+
+    .info__rating {
+        font-size: 1.5rem;
+    }
+
+    .info__text {
+        font-size: 0.875rem;
+        margin-top: 15px;
+    }
+
+    .right-block__items {
+        margin: 25px 0;
+    }
+
+}
